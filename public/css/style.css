@@ -1,0 +1,306 @@
+
+/*Fuentes*/
+@font-face
+  {
+    font-family: HelveticaNeue;
+    src: url('../fonts/HelveticaNeue.ttc');
+  }
+  @font-face
+  {
+    font-family: CheddarGothic ;
+    src: url('../fonts/CheddarGothicRough-Regular.otf');
+  }
+  @font-face
+  {
+    font-family: Knucklehead ;
+    src: url('../fonts/Knucklehead-Black.otf');
+  }
+  
+  /*cuerpo*/
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #000000;
+    
+  }
+#nav
+{
+ font-family: HelvelticaNeue;
+ font-size: 13px;
+ background-color: #000000;
+ font-family: HelveticaNeue;
+ 
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  color: white;
+
+}
+  #body
+  {
+    
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    /* fix firefox can't set height smaller than content on flex item */
+    min-height: 0;
+       
+    text-align: center;
+  }
+#header {
+    display: flex;
+  flex: auto;
+  flex-direction: column;
+  /* fix firefox can't set height smaller than content on flex item */
+  min-height: 0;
+   
+  }
+
+
+ /*componentes*/ 
+ .buttonrojo {
+  width: 180px;
+  height: 38px;
+  border: solid 1px #ad8c63;
+  background-color: #ad8c63;
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.buttonborde
+{
+  width: 180px;
+  height: 38px;
+  border: solid 1px #ad8c63;
+  background: rgba(0, 0, 0, 0);
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: normal;
+  color: #fff;
+  border: solid 1px #ad8c63;
+}
+#menu
+{
+  align-items:center ;
+  justify-content:center;
+  display:flex;
+}
+
+  #slider
+{
+    background-image: url('../imagenes/hero-fondo.jpg');
+    align-items:center;
+    justify-content: center;
+  height: 620px;
+  background-size: 100% 100%;
+    background-position: center;
+
+}
+
+#headerpost
+{
+  
+  max-width: 1200px;
+  background-size: 100% 100%;
+  background-position: center;
+  align-items:center;
+  height: 600px;
+
+}
+#nosotros
+{
+  background-image: url('../imagenes/Fondo-Nosotros-85.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  align-items:center;
+  height: 472px;
+}
+#reservaciones
+{
+  background-image: url('../imagenes/Fondo-Reservaciones.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  align-items:center;
+  height: 472px;
+}
+
+.tab
+  {
+    width: 125px;
+    height: 31px;
+    background-color: #2e2e2e;
+    font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  color: #fff;
+  }
+  .tabclick
+  {
+   
+    background-color: #80715e;
+    color: #fff;
+
+  }
+  .tab:hover {
+   
+    background-color: #80715e;
+    color: #fff;
+
+  }
+  .subtab
+  {
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal; 
+    color:#fff;
+  }
+  .subtabclick
+  {
+   
+    color: #fff;
+
+  }
+  .subtab:hover {
+   
+    color: #fff;
+
+  }
+  
+  .infopromo
+  {
+    width: 336px;
+    height: 480px;
+  }
+  .imagenpromo
+  {
+    width: 328px;
+   
+  }
+  .rectangulo {
+    width: 18px;
+    height: 6px;
+    background-color: #fff;
+    margin-left: 49%;
+    margin-bottom: 20px;
+    }
+
+/*titulos parrafos     width: 318px;
+*/
+
+#tituloa
+{
+  font-family: CheddarGothic ;
+  font-size: 55px;
+  color: #fff;
+}
+
+#titulob
+{
+  font-family: Knucklehead;
+  font-size: 64px;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color:#fff;
+}
+#tituloc
+{
+  font-family: Knucklehead;
+  font-size: 64px;
+    color:#ad8c63;
+}
+
+#parrafoa
+{
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+
+
+#brand
+{
+  display: none;
+
+} 
+
+@media (max-width: 576px) 
+  {
+  .nomovil
+  {
+    display: none ;
+  }
+  .simovil
+  {
+    display: inline ;
+
+  }  
+ 
+
+  #nosotros
+{
+  background-size: cover;
+}
+#slider
+{
+  text-align: center;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+#headerpost
+{
+  height: auto;
+}
+.buttonborde{
+  margin-left: 6%;
+}
+}
+@media (max-width: 768px) 
+  {
+ 
+    #brand
+    {
+      display: inline ;
+  
+    }
+    #menu
+    {
+      display: inline ;
+  
+    }
+    .nomovil
+    {
+      display: none ;
+    }
+    
+}
+  
