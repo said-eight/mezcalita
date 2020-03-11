@@ -7,7 +7,7 @@
 <li class=" nav-item  " v-for="(sucursal, index) in sucursales" 
                      :key="sucursal.sucid" >
        <a class="nav-link tabsuc" :class="{tabsucclick: tabsuc==index}"   @click="activartabsuc(index)"  href="#sucursales"  >
-                <i class="fas fa-map-marker-alt"></i>      {{sucursal.nombre}}
+                <i class="fas fa-map-marker-alt"></i>      {{sucursal.nombre}} 
                        <p class="sucdireccion" :class="{sucdireccionclick: tabsuc==index}">{{sucursal.direccion}}</p>
                      </a>
       
@@ -18,6 +18,7 @@
 
 <b-col md="6">
 <b-row cols="2" no-gutters> 
+
 <b-col md="5">
  <img src="imagenes/sucursales/sucursal.jpg" width="223" >
 </b-col>
@@ -41,7 +42,7 @@ export default {
     name: 'sucursales',
      computed:
     {
-      ...mapState(['tabsuc','sucursales'])
+      ...mapState(['sucursales','tabsuc'])
     },
     methods:
   { 

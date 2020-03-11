@@ -1,70 +1,46 @@
 <template>
-      <div>
-  <b-container>
-    <b-row>
-      <b-col cols="12">
-        <carousel :perPage="2">
-          <slide class="p-2">
-            <b-card title="Card Title 1" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
-              <b-card-text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </b-card-text>
-              <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </slide>
-          <slide class="p-2">
-            <b-card title="Card Title 2" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
-              <b-card-text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </b-card-text>
+    <div class="container text-center mt-4 " style="max-width:1400px;"> 
+      
+   <carousel  :nav="false" :dots="false" :autoplay="true" :responsive="{0:{items:1},578:{items:2},1000:{items:3}}">
 
-              <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </slide>
-          <slide class="p-2">
-            <b-card title="Card Title 3" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
-              <b-card-text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </b-card-text>
-
-              <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </slide>
-          <slide class="p-2">
-            <b-card title="Card Title 4" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article">
-              <b-card-text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </b-card-text>
-
-              <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </slide>
-        </carousel>
+<carousel-item v-for="taco in tacos" 
+                     :key="taco.id_taco"  >
+<div>
+  <b-card no-body class="overflow-hidden" style="max-width: 400px;" bg-variant="transparent">
+    <b-row >
+      <b-col md="6" >
+        <b-card-img :src="taco.imagen_taco" class="rounded-0"></b-card-img>
+      </b-col>
+      <b-col md="6">
+          <b-card-text>
+          <p id="tituloproducto">{{taco.nombre_taco}}        {{taco.precio_taco}} </p>
+          <h5 id="parrafob">{{taco.descripcion_taco}}</h5>
+          </b-card-text>
       </b-col>
     </b-row>
-  </b-container>
+  </b-card>
 </div>
+</carousel-item>
+
+
+
+</carousel>
+ 
+  </div>
 </template>
 <script>
+import carousel from 'vue-owl-carousel'
+import {mapState} from 'vuex';
+
 export default {
     name: 'c_20',
-    data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
+     computed:
+    {
+      ...mapState(['tacos'])
     },
-    components: {
-    'carousel': VueCarousel.Carousel,
-    'slide': VueCarousel.Slide
-  },
-    methods: {
-      onSlideStart(slide) {
-        this.sliding = true
-      },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
+   components:
+    { 
+      carousel 
     }
 }
 </script>

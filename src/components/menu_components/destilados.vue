@@ -1,5 +1,5 @@
 <template>
-    <p> destilados</p>
+    <p id="titulod"> derstilados</p>
 </template>
 <script>
 export default {

@@ -44,13 +44,15 @@
 <br>
 <br>
     <headercomp></headercomp>
-     <h5 class="espacio"></h5>
+
 
      <nosotros></nosotros>
           <h5 class="espacio"></h5>
 
       <a name="menu_mezcalita"></a>
-               <h5 class="espacio"></h5>
+<menu2></menu2>
+<br>
+     <h5 class="espacio"></h5>
 
      <promociones></promociones>
      <h5 class="espacio"></h5>

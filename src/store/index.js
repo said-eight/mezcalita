@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     tab: 1,
-    subtab: 0,
+    subtab: 1,
     tabsuc: 0,
     cat_menu20:[
     {
@@ -31,8 +31,53 @@ export default new Vuex.Store({
     },
     {
       id:6,
-      nombre:'botanas'
+      nombre:'botanas '
     }
+  ],
+  tacos:[
+    {
+      id_taco:1,
+      nombre_taco:'Arrachera',
+      precio_taco: '$20',
+      descripcion_taco:'Preparado con tortilla taquera, cebolla y cilantro',
+      imagen_taco:'imagenes/fotos menu/tacos/arrachera.jpg',
+    },
+    {
+      id_taco:2,
+      nombre_taco:'Barbacoa',
+      precio_taco: '$20',
+      descripcion_taco:'Preparado con tortilla taquera, cebolla y cilantro',
+      imagen_taco:'imagenes/fotos menu/tacos/barbacoa.jpg'
+    },
+    {
+      id_taco:3,
+      nombre_taco:'Camaron capeado',
+      precio_taco: '$20',
+      descripcion_taco:'Preparado con tortilla taquera, cebolla y cilantro',
+      imagen_taco:'imagenes/fotos menu/tacos/camaroncapeado.jpg'
+    },
+    {
+      id_taco:4,
+      nombre_taco:'Carnitas',
+      precio_taco: '$20',
+      descripcion_taco:'Preparado con tortilla taquera, cebolla y cilantro',
+      imagen_taco:'imagenes/fotos menu/tacos/carnitas.jpg'
+    },
+    {
+      id_taco:5,
+      nombre_taco:'Chicharron',
+      precio_taco: '$20',
+      descripcion_taco:'Preparado con tortilla taquera, cebolla y cilantro',
+      imagen_taco:'imagenes/fotos menu/tacos/chicharron.jpg'
+    },
+    {
+      id_taco:6,
+      nombre_taco:'Cochinita',
+      precio_taco: '$20',
+      descripcion_taco:'Preparado con tortilla taquera, cebolla y cilantro',
+      imagen_taco:'imagenes/fotos menu/tacos/cochinita.jpg'
+    }
+ 
   ],
   carrusel: ['imagenes/carrusel/carrusel-1.jpg','imagenes/carrusel/carrusel-2.jpg','imagenes/carrusel/carrusel-3.jpg','imagenes/carrusel/carrusel-4.jpg'],
 
@@ -69,7 +114,6 @@ export default new Vuex.Store({
       info_imagen:'imagenes/imagenes promo/info/info-cumple.jpg'
     },
   ],
-
   sucursales:[
     {
       sucid:1,
@@ -110,7 +154,6 @@ export default new Vuex.Store({
     {
       state.tabsuc=selectedtab
     }
-   
   },
   actions: {
   },
