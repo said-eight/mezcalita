@@ -1,6 +1,8 @@
 <template>
   <div class="container-fluid  d-flex    "  id="slider"  >
+
     <div class="container " id="headerpost"  >
+      
     <div class="row mt-4  ">
       <div class="col-4 col-md-5 nomovil"  >
         <img src="imagenes/hero-alacran.png"    class="card-img mt-4 text-left " >

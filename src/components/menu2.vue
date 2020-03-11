@@ -34,9 +34,9 @@
 
 <div v-if="tab==1">
   <ul class="nav justify-content-center mb-1 ">
-    <li class=" nav-item " v-for="(categoria, index) in cat_menu20" 
-                     :key="categoria.id" :class="{subtabclick: subtab==index}"   @click="activarsubtab(index)" >
-       <a class="nav-link subtab" href="#menu_mezcalita"  >
+    <li class=" nav-item  " v-for="(categoria, index) in cat_menu20" 
+                     :key="categoria.id"  >
+       <a class="nav-link subtab" :class="{subtabclick: subtab==index}"  @click="activarsubtab(index)" href="#menu_mezcalita"  >
                      {{categoria.nombre}}
                      </a>
                      </li>

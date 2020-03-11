@@ -2,8 +2,7 @@
   <div id="app">
 
 
-
-<b-container  fluid class="bv-example-row mt-3" id="nav">
+<b-container  fluid class="bv-example-row  fixed-top" id="nav">
  <b-row  > 
     <b-col class="text-center " >
       <img src="iconos/header/Logo-Header.svg"  
@@ -41,19 +40,37 @@
    
   </b-row>
 </b-container>
-
-
-
-    <headercomp></headercomp>
-     
-     <nosotros></nosotros>
-      <a name="menu_mezcalita"></a>
-     <menu2 ></menu2>
-     <promociones></promociones>
-     <reservaciones></reservaciones>
 <br>
+<br>
+<br>
+    <headercomp></headercomp>
+     <h5 class="espacio"></h5>
+
+     <nosotros></nosotros>
+          <h5 class="espacio"></h5>
+
+      <a name="menu_mezcalita"></a>
+               <h5 class="espacio"></h5>
+
+     <promociones></promociones>
+     <h5 class="espacio"></h5>
+
+     <reservaciones></reservaciones>
+          <h5 class="espacio"></h5>
+
+
   <carrusel></carrusel>
+       <h5 class="espacio"></h5>
+
   <franquicias></franquicias>
+                 <a name="sucursales"></a>
+
+         <h5 class="espacio"></h5>
+
+
+       <sucursales></sucursales>
+              <h5 class="espacio"></h5>
+       <bolsayfacturacion></bolsayfacturacion>
     <router-view/>
   </div>
 </template>
@@ -68,6 +85,9 @@ import menu2 from '@/components/menu2.vue'
 import promociones from '@/components/promociones.vue'
 import carrusel from '@/components/carrusel.vue'
 import franquicias from '@/components/franquicias.vue'
+import sucursales from '@/components/sucursales.vue'
+
+import bolsayfacturacion from '@/components/bolsayfacturacion.vue'
 
 
 export default {
@@ -79,7 +99,9 @@ export default {
     reservaciones,
     promociones,
     carrusel,
-    franquicias
+    franquicias,
+    sucursales,
+    bolsayfacturacion
   },
   
 }
