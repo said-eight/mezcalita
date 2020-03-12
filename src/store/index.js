@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     tab: 1,
-    subtab: 1,
+    subtab: 0,
     tabsuc: 0,
     cat_menu20:[
     {
@@ -139,7 +139,26 @@ export default new Vuex.Store({
       direccion:'Gigantes #4029 Guadalajara. 33 3605 7664'
     }
   ],
+  musicaenvivo:[
 
+    {
+      id_musica:1,
+      imagen_musica:'imagenes/musica en vivo/musica-1.jpg'
+
+    },
+    {
+      id_musica:2,
+      imagen_musica:'imagenes/musica en vivo/musica-2.jpg'
+
+    },
+    {
+      id_musica:3,
+      imagen_musica:'imagenes/musica en vivo/musica-3.jpg'
+
+    },
+  
+  ],
+  
   },
   mutations: {
     activartab(state, selectedtab)

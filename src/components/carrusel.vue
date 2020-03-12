@@ -9,11 +9,11 @@
 <br>
 
 
-     <b-row cols="4" no-gutters>
+     <b-row cols="2" cols-md="4" no-gutters>
 
     <b-col v-for="(imagen, index) in carrusel" 
          :key="index"  >
-   <a ><img  :src="imagen" class="imagenpromo"  > </a>
+   <a ><img  :src="imagen" class="card-img"  > </a>
 
    </b-col>
      </b-row>

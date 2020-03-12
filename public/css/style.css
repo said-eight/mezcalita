@@ -25,6 +25,11 @@
     background-color: #000000;
     
   }
+#app
+{
+  background-color: #000000;
+
+}
 #nav
 {
  font-family: HelvelticaNeue;
@@ -42,7 +47,8 @@
 }
   #body
   {
-    
+    background-color: #000000;
+
     display: flex;
     flex: auto;
     flex-direction: column;
@@ -57,7 +63,8 @@
   flex-direction: column;
   /* fix firefox can't set height smaller than content on flex item */
   min-height: 0;
-   
+  background-color: #000000;
+
   }
 
 
@@ -114,6 +121,7 @@
   align-items:center ;
   justify-content:center;
   display:flex;
+  
 }
 
   #slider
@@ -153,7 +161,14 @@
   align-items:center;
   height: 472px;
 }
-
+#musicaenvivo
+{
+  background-image: url('../imagenes/Fondo-MusicaEnVivo.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  align-items:center;
+  height: 570px;
+}
 .tab
   {
     width: 125px;
@@ -190,7 +205,7 @@
     font-style: normal;
     line-height: 1.53;
     letter-spacing: normal; 
-    color:#fff;
+    color: grey;
   }
   .subtabclick
   {

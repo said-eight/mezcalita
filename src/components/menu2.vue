@@ -25,18 +25,18 @@
   </li>
 </ul>
 
-     
+    
 
   </div>
     </div>
 
-    <div class="container mt-4" style="max-width:1400px;background-color: black;">
+    <div class="container  text-center mt-4" style="max-width:1400px;background-color: black;">
 
 <div v-if="tab==1">
   <ul class="nav justify-content-center mb-1 ">
     <li class=" nav-item " v-for="(categoria, index) in cat_menu20" 
-                     :key="categoria.id" :class="{subtabclick: subtab==index}"   @click="activarsubtab(index)" >
-       <a class="nav-link subtab" href="#menu_mezcalita"  >
+                     :key="categoria.id"   @click="activarsubtab(index)" >
+       <a class="nav-link subtab" :class="{subtabclick: subtab==index}"  href="#menu_mezcalita"  >
                      {{categoria.nombre}}
                      </a>
                      </li>
@@ -55,6 +55,9 @@
 <div v-if="tab==5">
   <destilados></destilados>
 </div>
+<br>
+  <h5 id="parrafoa"  >¡Lo llevamos hasta tu casa!</h5>
+      <img src="iconos/menu/boton-rappi.svg" width="161" >
     </div>
 
     
@@ -62,7 +65,7 @@
 </template>
 <script>
 import {mapState, mapMutations} from 'vuex';
- import c_20 from '@/components/menu_components/categorias_components/c_20.vue'
+ import c_20 from '@/components/menu_components/categorias_components/categorias_menu20.vue'
  
  import especiales from '@/components/menu_components/especiales.vue'
  import bebidas from '@/components/menu_components/bebidas.vue'

@@ -1,42 +1,47 @@
 <template>
+
+    <div class="container text-center mt-4 " style="max-width:1400px;" v-if="subtab==0"> 
+      
+   <carousel  :nav="false" :dots="false" :autoplay="true" :responsive="{0:{items:1},578:{items:2},1000:{items:3}}">
+
+<carousel-item v-for="taco in tacos" 
+                     :key="taco.id_taco"  >
 <div>
+  <b-card no-body class="overflow-hidden" style="max-width: 400px;" bg-variant="transparent">
+    <b-row >
+      <b-col md="6" >
+        <b-card-img :src="taco.imagen_taco" class="rounded-0"></b-card-img>
+      </b-col>
+      <b-col md="6">
+          <b-card-text>
+          <p id="tituloproducto">{{taco.nombre_taco}}        {{taco.precio_taco}} </p>
+          <h5 id="parrafob">{{taco.descripcion_taco}}</h5>
+          </b-card-text>
+      </b-col>
+    </b-row>
+  </b-card>
+</div>
+</carousel-item>
 
-<div id="tacos"  class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" >
-    <div class="  carousel-item active  ">
 
-            <p> hola</p>
 
-    </div>
-    <div class="carousel-item">
-  <img src="..." alt="...">
-  <div class="carousel-caption d-none d-md-block">
-    <h5>...</h5>
-    <p>...</p>zz
+</carousel>
+ 
   </div>
-</div>
-    <div class="carousel-item">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#tacos" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#tacos" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-</div>
-    
 </template>
 <script>
-
+import carousel from 'vue-owl-carousel'
+import {mapState} from 'vuex';
 
 export default {
-    name: 'categorias_menu20'
- 
+    name: 'categorias_menu20',
+     computed:
+    {
+      ...mapState(['tacos','subtab'])
+    },
+   components:
+    { 
+      carousel 
+    }
 }
 </script>

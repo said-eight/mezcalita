@@ -17,9 +17,9 @@
 
 
 <b-col md="6">
-<b-row cols="2" no-gutters> 
+<b-row cols="1" md="2" no-gutters> 
 
-<b-col md="5">
+<b-col md="5" class="nomovil">
  <img src="imagenes/sucursales/sucursal.jpg" width="223" >
 </b-col>
 
@@ -27,7 +27,7 @@
 <b-col md="2">
 <div v-for="(sucursal, index) in sucursales" 
                      :key="sucursal.sucid" >
-<iframe v-if="tabsuc==index" :src="sucursal.maps" width="550" height="342" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<iframe v-if="tabsuc==index" :src="sucursal.maps" class="nomovil" width="550" height="342" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>
 </b-col>
 </b-row>
